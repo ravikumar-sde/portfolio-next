@@ -58,7 +58,7 @@ const Contact = () => {
             <div className="absolute top-1/4 right-1/4 w-[450px] h-[450px] bg-purple-600/10 rounded-full blur-[110px] pointer-events-none -z-10"></div>
             <div className="absolute bottom-1/3 left-1/3 w-[400px] h-[400px] bg-amber-500/12 rounded-full blur-[100px] pointer-events-none -z-10"></div>
 
-            <div className='w-full md:w-3/4 lg:w-2/4 m-auto px-4 md:px-0 text-[#dde1e7] flex flex-col h-full'>
+            <div className='w-full md:w-2/3 lg:w-2/4 m-auto px-4 md:px-0 text-[#dde1e7] flex flex-col h-full'>
                 {/* Header - Fixed */}
                 <div className='shrink-0 mb-4 md:mb-6'>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-2 md:mb-3 bg-linear-to-r from-[#dde1e7] via-amber-400 to-[#dde1e7] bg-clip-text text-transparent">
@@ -72,7 +72,7 @@ const Contact = () => {
                 {/* Scrollable Content */}
                 <div className='flex-1 relative overflow-hidden'>
                     <div className='h-full overflow-y-auto scrollbar-hide pb-8'>
-                        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 sm:w-2/3 sm:max-w-full m-auto'>
                     {/* Left Column - Social Links & Resume */}
                     <div className='space-y-6 md:space-y-8'>
                         {/* Social Media Links */}

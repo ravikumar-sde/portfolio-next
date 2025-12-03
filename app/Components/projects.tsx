@@ -146,7 +146,7 @@ const Projects = () => {
     }, []);
 
     return (
-        <div className='relative w-full min-h-screen flex flex-col py-8 mt-6 md:mt-10'>
+        <div className='relative w-full flex flex-col py-8'>
             {/* Section gradient accents */}
             <div className="absolute top-1/3 left-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-amber-500/12 rounded-full blur-[120px] pointer-events-none -z-10"></div>
             <div className="absolute bottom-1/4 right-1/3 w-[250px] md:w-[450px] h-[250px] md:h-[450px] bg-purple-600/10 rounded-full blur-[110px] pointer-events-none -z-10"></div>
