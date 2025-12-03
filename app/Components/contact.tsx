@@ -53,7 +53,7 @@ const Contact = () => {
     };
 
     return (
-        <div className='relative w-full h-screen flex flex-col py-8 mt-10'>
+        <div className='relative w-full flex flex-col py-8 mt-10'>
             {/* Section gradient accents */}
             <div className="absolute top-1/4 right-1/4 w-[450px] h-[450px] bg-purple-600/10 rounded-full blur-[110px] pointer-events-none -z-10"></div>
             <div className="absolute bottom-1/3 left-1/3 w-[400px] h-[400px] bg-amber-500/12 rounded-full blur-[100px] pointer-events-none -z-10"></div>
@@ -76,7 +76,7 @@ const Contact = () => {
                     {/* Left Column - Social Links & Resume */}
                     <div className='space-y-6 md:space-y-8'>
                         {/* Social Media Links */}
-                        <div>
+                        <div className='sm:opacity-0 sm:absolute'>
                             <h3 className='text-xl md:text-2xl font-semibold text-amber-400 mb-4 md:mb-6 flex items-center gap-2'>
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
