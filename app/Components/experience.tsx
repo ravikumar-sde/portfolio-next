@@ -12,7 +12,7 @@ const Experience = () => {
             <div className="absolute top-1/4 right-0 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-amber-500/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
             <div className="absolute bottom-1/4 left-0 w-[200px] md:w-[350px] h-[200px] md:h-[350px] bg-purple-600/8 rounded-full blur-[100px] pointer-events-none -z-10"></div>
 
-            <div className='w-full md:w-3/4 lg:w-2/4 m-auto px-4 md:px-0 pb-8 text-[#dde1e7]'>
+            <div className='w-full md:w-2/3 lg:w-2/4 m-auto px-4 md:px-0 pb-8 text-[#dde1e7]'>
                 {/* Header */}
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-3 md:mb-4 bg-linear-to-r from-[#dde1e7] via-amber-400 to-[#dde1e7] bg-clip-text text-transparent">
                     Experience
@@ -34,7 +34,7 @@ const Experience = () => {
                             alt="rapidops-logo"
                             width={100}
                             height={100}
-                            className="brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300 md:w-[140px] md:h-[140px]"
+                            className="brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300"
                         />
                     </div>
                 </Link>

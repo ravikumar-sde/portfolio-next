@@ -9,7 +9,7 @@ import FloatingActionButton from "./Components/FloatingActionButton";
 
 export default function Home() {
   return (
-    <div className="w-full m-auto relative">
+    <div className="w-full m-auto relative overflow-x-hidden">
       {/* Animated Background Gradient */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         {/* Base dark background */}
@@ -52,8 +52,6 @@ export default function Home() {
         <Contact />
       </div>
       <Footer />
-
-      {/* Floating Action Button */}
       <FloatingActionButton />
     </div>
   );

@@ -31,7 +31,7 @@ const Footer = () => {
 
     return (
         <footer className='relative w-full bg-[#0a0c10] border-t border-[#2a2d35]'>
-            <div className='w-full md:w-3/4 lg:w-2/4 m-auto py-8 md:py-12 px-4'>
+            <div className='w-full lg:w-2/4 m-auto py-8 md:py-12 px-4'>
                 {/* Main Footer Content */}
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-8'>
                     {/* Brand Section */}
