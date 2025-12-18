@@ -14,19 +14,19 @@ const Contact = () => {
         {
             name: "LinkedIn",
             icon: "devicon-linkedin-plain",
-            link: "https://www.linkedin.com/in/ravi-kumar-8284-singh/",
+            link: "https://www.linkedin.com/in/ravi-kumar-b21592175/",
             color: "#0077B5"
         },
         {
             name: "GitHub",
             icon: "devicon-github-original",
-            link: "https://github.com/ravikumarsingh9907",
+            link: "https://github.com/ravikumar-sde",
             color: "#ffffff"
         },
         {
             name: "Twitter",
             icon: "devicon-twitter-original",
-            link: "https://twitter.com/xmart_rv_singh",
+            link: "https://x.com/xmart_rv_singh",
             color: "#1DA1F2"
         }
     ];
@@ -53,7 +53,7 @@ const Contact = () => {
     };
 
     return (
-        <div className='relative w-full h-screen flex flex-col py-8 mt-10'>
+        <div id="contact" className='relative w-full flex flex-col py-8 mt-10'>
             {/* Section gradient accents */}
             <div className="absolute top-1/4 right-1/4 w-[450px] h-[450px] bg-purple-600/10 rounded-full blur-[110px] pointer-events-none -z-10"></div>
             <div className="absolute bottom-1/3 left-1/3 w-[400px] h-[400px] bg-amber-500/12 rounded-full blur-[100px] pointer-events-none -z-10"></div>
