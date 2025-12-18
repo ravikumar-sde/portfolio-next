@@ -228,7 +228,7 @@ function AppleHelloEnglishEffect({
         initial={initialProps}
         animate={animateProps}
         transition={{
-          duration: calc(2.8),
+          duration: calc(2),
           ease: "easeInOut",
           delay: calc(0.7),
           opacity: { duration: 0.7, delay: calc(0.7) },

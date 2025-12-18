@@ -22,12 +22,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     isHovered = false
 }) => {
     return (
-        <div className='group h-full bg-linear-to-br from-[#1a1d23] to-[#0c0f11] border border-[#2a2d35] hover:border-amber-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/20 rounded-xl overflow-hidden relative flex flex-col'>
+        <div className='group h-[440px] bg-linear-to-br from-[#1a1d23] to-[#0c0f11] border border-[#2a2d35] hover:border-amber-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/20 rounded-xl overflow-hidden relative flex flex-col'>
             {/* Gradient overlay on hover */}
             <div className='absolute inset-0 bg-linear-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10'></div>
 
             {/* Image Section */}
-            <div className='relative w-full h-48 overflow-hidden bg-[#0c0f11]'>
+            <div className='relative w-full h-40 shrink-0 overflow-hidden bg-[#0c0f11]'>
                 <Image
                     src={image}
                     alt={title}
@@ -44,33 +44,33 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
 
             {/* Content Section */}
-            <div className='p-5 relative z-20 flex flex-col flex-1'>
-                <h3 className='text-xl font-bold mb-2 text-[#dde1e7] group-hover:text-amber-400 transition-colors duration-300'>
+            <div className='p-4 relative z-20 flex flex-col flex-1 min-h-0'>
+                <h3 className='text-lg font-bold mb-2 text-[#dde1e7] group-hover:text-amber-400 transition-colors duration-300 line-clamp-2'>
                     {title}
                 </h3>
-                <p className='text-[#9ca3af] mb-4 text-sm leading-relaxed line-clamp-3 flex-1'>
+                <p className='text-[#9ca3af] mb-3 text-sm leading-relaxed h-12 overflow-y-auto scrollbar-hide'>
                     {description}
                 </p>
 
                 {/* Technologies */}
-                <div className='flex flex-wrap gap-2 mb-4'>
+                <div className='flex flex-wrap gap-2 mb-3'>
                     {technologies.slice(0, 4).map((tech, index) => (
                         <span
                             key={index}
-                            className='px-2.5 py-1 bg-[#0a0c10] text-amber-400 text-xs font-medium rounded-md border border-amber-500/20 hover:border-amber-500/50 hover:bg-amber-500/10 transition-all duration-300 cursor-default'
+                            className='px-2 py-0.5 bg-[#0a0c10] text-amber-400 text-xs font-medium rounded-md border border-amber-500/20 hover:border-amber-500/50 hover:bg-amber-500/10 transition-all duration-300 cursor-default'
                         >
                             {tech}
                         </span>
                     ))}
                     {technologies.length > 4 && (
-                        <span className='px-2.5 py-1 bg-[#0a0c10] text-[#9ca3af] text-xs font-medium rounded-md border border-[#2a2d35]'>
+                        <span className='px-2 py-0.5 bg-[#0a0c10] text-[#9ca3af] text-xs font-medium rounded-md border border-[#2a2d35]'>
                             +{technologies.length - 4}
                         </span>
                     )}
                 </div>
 
                 {/* Action buttons */}
-                <div className='flex gap-2 pt-3 border-t border-[#2a2d35]'>
+                <div className='flex gap-2 pt-3 border-t border-[#2a2d35] mt-auto'>
                     {liveLink && (
                         <a
                             href={liveLink}

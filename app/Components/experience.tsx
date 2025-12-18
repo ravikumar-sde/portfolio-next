@@ -41,13 +41,13 @@ const Experience = () => {
 
                 {/* Timeline Container */}
                 <div className='relative'>
-                    {/* Timeline line with gradient */}
-                    <div className='w-0.5 bg-linear-to-b from-amber-500 via-amber-400 to-amber-500 absolute top-0 left-3 bottom-5 shadow-lg shadow-amber-500/30'></div>
+                    {/* Timeline line with gradient - hidden on mobile */}
+                    <div className='hidden md:block w-0.5 bg-linear-to-b from-amber-500 via-amber-400 to-amber-500 absolute top-0 left-3 bottom-5 shadow-lg shadow-amber-500/30'></div>
 
                     {/* First Position */}
-                    <div className="relative pl-12 pb-8 group/position">
-                        {/* First timeline dot */}
-                        <div className="absolute top-6 left-0 w-6 h-6 flex items-center justify-center">
+                    <div className="relative md:pl-12 pb-8 group/position">
+                        {/* First timeline dot - hidden on mobile */}
+                        <div className="hidden md:flex absolute top-6 left-0 w-6 h-6 items-center justify-center">
                             <div className="absolute w-6 h-6 bg-amber-500 rounded-full animate-ping opacity-20"></div>
                             <div className="relative w-4 h-4 bg-amber-500 rounded-full border-2 border-[#0a0c10] shadow-lg shadow-amber-500/50"></div>
                         </div>
@@ -80,7 +80,7 @@ const Experience = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     <span className='text-sm leading-relaxed'>
-                                        Collaborated with senior developers to implement APIs and database schemas.
+                                        Built RESTful APIs using Node.js and Express.js with MongoDB integration
                                     </span>
                                 </li>
                                 <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
@@ -88,7 +88,7 @@ const Experience = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     <span className='text-sm leading-relaxed'>
-                                        Conducted pair programming to enhance code quality and foster knowledge sharing.
+                                        Designed database schemas and wrote optimized queries for MySQL and MongoDB
                                     </span>
                                 </li>
                                 <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
@@ -96,7 +96,7 @@ const Experience = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     <span className='text-sm leading-relaxed'>
-                                        Authored comprehensive unit test cases for the APIs to ensure reliability and functionality.
+                                        Developed unit tests and participated in code reviews to maintain code quality
                                     </span>
                                 </li>
                                 <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
@@ -104,7 +104,7 @@ const Experience = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     <span className='text-sm leading-relaxed'>
-                                        Implemented robust development architecture to optimize system performance.
+                                        Collaborated with cross-functional teams using Agile methodologies
                                     </span>
                                 </li>
                             </ul>
@@ -112,9 +112,9 @@ const Experience = () => {
                     </div>
 
                     {/* Second Position */}
-                    <div className="relative pl-12 pb-8 group/position">
-                        {/* Second timeline dot */}
-                        <div className="absolute top-6 left-0 w-6 h-6 flex items-center justify-center">
+                    <div className="relative md:pl-12 pb-8 group/position">
+                        {/* Second timeline dot - hidden on mobile */}
+                        <div className="hidden md:flex absolute top-6 left-0 w-6 h-6 items-center justify-center">
                             <div className="absolute w-6 h-6 bg-amber-500 rounded-full animate-ping opacity-20"></div>
                             <div className="relative w-4 h-4 bg-amber-500 rounded-full border-2 border-[#0a0c10] shadow-lg shadow-amber-500/50"></div>
                         </div>
@@ -152,7 +152,7 @@ const Experience = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     <span className='text-sm leading-relaxed'>
-                                        Developed innovative and scalable server-side solutions as a part of Experro&apos;s admin panel team.
+                                        Developed scalable backend services for Experro&apos;s admin panel using Node.js and Express.js
                                     </span>
                                 </li>
                                 <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
@@ -160,7 +160,7 @@ const Experience = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     <span className='text-sm leading-relaxed'>
-                                        Implemented parallel and asynchronous operations using thread pooling.
+                                        Optimized database performance through indexing and query optimization in MySQL
                                     </span>
                                 </li>
                                 <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
@@ -168,7 +168,7 @@ const Experience = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     <span className='text-sm leading-relaxed'>
-                                        Designed and developed index-based database schemas for multiple services.
+                                        Implemented asynchronous operations and thread pooling for improved application performance
                                     </span>
                                 </li>
                                 <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
@@ -176,7 +176,7 @@ const Experience = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     <span className='text-sm leading-relaxed'>
-                                        Authored database migration and optimized scripts, resulting in improved database performance.
+                                        Deployed applications using Docker and AWS (EC2, S3, RDS) for production environments
                                     </span>
                                 </li>
                                 <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
@@ -184,7 +184,7 @@ const Experience = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     <span className='text-sm leading-relaxed'>
-                                        Collaborated in an innovative team environment, fostering effective communication and knowledge sharing.
+                                        Built React.js components and integrated Redux for state management in web applications
                                     </span>
                                 </li>
                             </ul>

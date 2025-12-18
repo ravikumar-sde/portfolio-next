@@ -1,7 +1,9 @@
 'use client'
 import { useState, useRef, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
-import zomatoLogo from '../Assets/Icon.png';
+import taskflowLogo from '../Assets/task-management-thumbnail.png';
+import foodieLogo from '../Assets/foodie-thumnail.png';
+import cinephileLogo from '../Assets/cinephile-thumbnail.png';
 
 const Projects = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -9,63 +11,34 @@ const Projects = () => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(true);
-    const [isAutoScrolling, setIsAutoScrolling] = useState(false);
-    const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
     const projects = [
         {
-            title: 'Zomato Clone',
-            description: 'A full-featured food delivery platform clone with restaurant listings, cart functionality, and order management.',
-            technologies: ['React.js', 'Tailwind CSS', 'Redux'],
+            title: 'Task Flow - Task Management Tool',
+            description: 'A task management tool that helps users to manage their tasks and projects. inspired by Trello.',
+            technologies: ['Node.js', 'Express', 'MongoDB', 'CSS', 'React.js', 'Redux'],
             category: 'Web App',
-            image: zomatoLogo,
-            liveLink: 'https://example.com',
-            githubLink: 'https://github.com/ravikumarsingh9907'
+            image: taskflowLogo,
+            liveLink: 'https://task-flow-frontend-psi.vercel.app/',
+            githubLink: 'https://github.com/ravikumar-sde/task-flow-frontend'
         },
         {
-            title: 'E-Commerce Platform',
-            description: 'Modern e-commerce solution with payment integration, inventory management, and admin dashboard.',
-            technologies: ['Next.js', 'Node.js', 'MongoDB', 'Stripe'],
+            title: 'Foodie - Food Ordering Platform',
+            description: 'A food ordering platform that allows users to order food from their favorite restaurants.',
+            technologies: ['Node.js', 'Express', 'MongoDB', 'CSS', 'React.js', 'Redux', 'Node.js'],
             category: 'Web App',
-            image: zomatoLogo,
-            liveLink: 'https://example.com',
-            githubLink: 'https://github.com/ravikumarsingh9907'
+            image: foodieLogo,
+            liveLink: 'https://foodie-frontend-psi.vercel.app/',
+            githubLink: 'https://github.com/ravikumar-sde/foodie-frontend'
         },
         {
-            title: 'Task Management System',
-            description: 'Collaborative task management tool with real-time updates, team collaboration, and progress tracking.',
-            technologies: ['Vue.js', 'Express', 'PostgreSQL', 'Socket.io'],
+            title: 'Cinephile - Movie Recommendation App',
+            description: 'A movie recommendation app that uses the TMDB API to fetch movie data and recommends movies to users based on their preferences.',
+            technologies: ['React.js', 'Redux - RTK', 'Firebase', 'OpenAI'],
             category: 'Web App',
-            image: zomatoLogo,
-            liveLink: 'https://example.com',
-            githubLink: 'https://github.com/ravikumarsingh9907'
-        },
-        {
-            title: 'AI Chat Application',
-            description: 'Intelligent chatbot application powered by AI with natural language processing and context awareness.',
-            technologies: ['React.js', 'Python', 'OpenAI', 'FastAPI'],
-            category: 'AI/ML',
-            image: zomatoLogo,
-            liveLink: 'https://example.com',
-            githubLink: 'https://github.com/ravikumarsingh9907'
-        },
-        {
-            title: 'Portfolio Website',
-            description: 'Modern portfolio website with interactive animations, dark mode, and responsive design.',
-            technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-            category: 'Web App',
-            image: zomatoLogo,
-            liveLink: 'https://example.com',
-            githubLink: 'https://github.com/ravikumarsingh9907'
-        },
-        {
-            title: 'Weather Dashboard',
-            description: 'Real-time weather tracking application with forecasts, maps, and location-based alerts.',
-            technologies: ['React.js', 'Weather API', 'Chart.js'],
-            category: 'Web App',
-            image: zomatoLogo,
-            liveLink: 'https://example.com',
-            githubLink: 'https://github.com/ravikumarsingh9907'
+            image: cinephileLogo,
+            liveLink: 'https://cinephile-mauve.vercel.app/',
+            githubLink: 'https://github.com/ravikumar-sde/cinephile'
         },
     ];
 
@@ -103,50 +76,8 @@ const Projects = () => {
         }
     };
 
-    // Auto-scroll functionality
-    const startAutoScroll = () => {
-        if (autoScrollIntervalRef.current) return; // Already scrolling
-
-        setIsAutoScrolling(true);
-        let direction: 'right' | 'left' = 'right';
-
-        autoScrollIntervalRef.current = setInterval(() => {
-            if (scrollContainerRef.current) {
-                const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-
-                // Check if we've reached the end
-                if (scrollLeft >= scrollWidth - clientWidth - 10) {
-                    direction = 'left';
-                } else if (scrollLeft <= 10) {
-                    direction = 'right';
-                }
-
-                // Smooth continuous scroll
-                scrollContainerRef.current.scrollBy({
-                    left: direction === 'right' ? 2 : -2,
-                    behavior: 'auto'
-                });
-            }
-        }, 20); // Scroll every 20ms for smooth animation
-    };
-
-    const stopAutoScroll = () => {
-        if (autoScrollIntervalRef.current) {
-            clearInterval(autoScrollIntervalRef.current);
-            autoScrollIntervalRef.current = null;
-            setIsAutoScrolling(false);
-        }
-    };
-
-    // Cleanup on unmount
-    useEffect(() => {
-        return () => {
-            stopAutoScroll();
-        };
-    }, []);
-
     return (
-        <div className='relative w-full flex flex-col py-8'>
+        <div id="projects" className='relative w-full flex flex-col py-8'>
             {/* Section gradient accents */}
             <div className="absolute top-1/3 left-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-amber-500/12 rounded-full blur-[120px] pointer-events-none -z-10"></div>
             <div className="absolute bottom-1/4 right-1/3 w-[250px] md:w-[450px] h-[250px] md:h-[450px] bg-purple-600/10 rounded-full blur-[110px] pointer-events-none -z-10"></div>
@@ -188,9 +119,11 @@ const Projects = () => {
                     {canScrollLeft && (
                         <button
                             onClick={() => scroll('left')}
-                            className='absolute left-0 md:left-2 top-1/2 -translate-y-1/2 z-20 bg-[#1a1d23] hover:bg-amber-500 border-2 border-amber-500/50 hover:border-amber-500 text-amber-400 hover:text-[#0a0c10] p-2 md:p-3 rounded-full shadow-lg shadow-amber-500/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm'
+                            aria-label="Scroll left"
+                            className='group absolute left-0 md:left-2 top-1/2 -translate-y-1/2 z-20 bg-[#1a1d23] hover:bg-amber-500 border-2 border-amber-500/50 hover:border-amber-500 text-amber-400 hover:text-[#0a0c10] p-2 md:p-3 rounded-full shadow-lg shadow-amber-500/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm active:scale-95'
                         >
-                            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="absolute inset-0 bg-amber-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <svg className="w-5 h-5 md:w-6 md:h-6 relative z-10 group-hover:-translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                             </svg>
                         </button>
@@ -200,9 +133,11 @@ const Projects = () => {
                     {canScrollRight && (
                         <button
                             onClick={() => scroll('right')}
-                            className='absolute right-0 md:right-2 top-1/2 -translate-y-1/2 z-20 bg-[#1a1d23] hover:bg-amber-500 border-2 border-amber-500/50 hover:border-amber-500 text-amber-400 hover:text-[#0a0c10] p-2 md:p-3 rounded-full shadow-lg shadow-amber-500/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm'
+                            aria-label="Scroll right"
+                            className='group absolute right-0 md:right-2 top-1/2 -translate-y-1/2 z-20 bg-[#1a1d23] hover:bg-amber-500 border-2 border-amber-500/50 hover:border-amber-500 text-amber-400 hover:text-[#0a0c10] p-2 md:p-3 rounded-full shadow-lg shadow-amber-500/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm active:scale-95'
                         >
-                            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="absolute inset-0 bg-amber-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <svg className="w-5 h-5 md:w-6 md:h-6 relative z-10 group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
                         </button>
@@ -212,13 +147,11 @@ const Projects = () => {
                     <div
                         ref={scrollContainerRef}
                         className='h-full overflow-x-auto scrollbar-hide flex items-center gap-4 md:gap-6 px-4 md:px-12 pb-8 md:pb-12'
-                        onMouseEnter={startAutoScroll}
-                        onMouseLeave={stopAutoScroll}
                     >
                         {filteredProjects.map((project, index) => (
                             <div
                                 key={index}
-                                className='shrink-0 w-[280px] md:w-[340px] lg:w-[380px] animate-in fade-in slide-in-from-right-4 duration-700'
+                                className='shrink-0 w-[320px] md:w-[360px] lg:w-[380px] animate-in fade-in slide-in-from-right-4 duration-700'
                                 style={{ animationDelay: `${index * 100}ms` }}
                                 onMouseEnter={() => setHoveredIndex(index)}
                                 onMouseLeave={() => setHoveredIndex(null)}
@@ -237,25 +170,16 @@ const Projects = () => {
                     </div>
 
                     {/* Horizontal Scroll Indicator */}
-                    {filteredProjects.length > 0 && !isAutoScrolling && (
+                    {filteredProjects.length > 0 && (
                         <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 md:gap-3 px-3 md:px-4 py-1.5 md:py-2 bg-[#1a1d23]/80 backdrop-blur-sm border border-amber-500/30 rounded-full transition-opacity duration-300">
                             <svg className="w-3 h-3 md:w-4 md:h-4 text-amber-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
                             </svg>
-                            <span className="text-amber-400 text-[10px] md:text-xs font-medium hidden sm:inline">Hover to auto-scroll</span>
+                            <span className="text-amber-400 text-[10px] md:text-xs font-medium hidden sm:inline">Scroll to explore</span>
                             <span className="text-amber-400 text-[10px] md:text-xs font-medium sm:hidden">Scroll</span>
                             <svg className="w-3 h-3 md:w-4 md:h-4 text-amber-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
-                        </div>
-                    )}
-
-                    {/* Auto-scrolling indicator */}
-                    {isAutoScrolling && (
-                        <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 md:gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-amber-500/90 backdrop-blur-sm rounded-full animate-in fade-in slide-in-from-bottom-2 duration-300">
-                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#0a0c10] rounded-full animate-pulse"></div>
-                            <span className="text-[#0a0c10] text-[10px] md:text-xs font-semibold">Auto-scrolling...</span>
-                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#0a0c10] rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                         </div>
                     )}
 
