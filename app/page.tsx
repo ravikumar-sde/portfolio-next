@@ -1,4 +1,4 @@
-import Navbar from "./Components/navbar";
+// import Navbar from "./Components/navbar";
 import Header from "./Components/header";
 import Skills from "./Components/skills";
 import Experience from "./Components/experience";
@@ -44,7 +44,7 @@ export default function Home() {
       </div>
 
       <div className="relative">
-        <Navbar />
+        {/* <Navbar /> */}
         <Header />
         <Experience />
         <Skills />
