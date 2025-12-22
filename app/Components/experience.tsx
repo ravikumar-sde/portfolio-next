@@ -51,73 +51,6 @@ const Experience = () => {
                             <div className="absolute w-6 h-6 bg-amber-500 rounded-full animate-ping opacity-20"></div>
                             <div className="relative w-4 h-4 bg-amber-500 rounded-full border-2 border-[#0a0c10] shadow-lg shadow-amber-500/50"></div>
                         </div>
-                        <div className="bg-[#1a1d23] border border-[#2a2d35] hover:border-amber-500/30 rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/10 relative">
-                            {/* Gradient overlay */}
-                            <div className="absolute inset-0 bg-linear-to-br from-amber-500/5 to-transparent opacity-0 group-hover/position:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
-
-                            {/* Date badge */}
-                            <div className="flex items-center gap-2 mb-3">
-                                <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg px-3 py-1.5 inline-flex items-center gap-2">
-                                    <svg className="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
-                                    <span className='text-sm font-semibold text-amber-400'>Sept. 2022 - Mar. 2023</span>
-                                </div>
-                            </div>
-
-                            {/* Position title */}
-                            <h3 className='text-xl font-bold text-[#dde1e7] mb-4 flex items-center gap-2'>
-                                <svg className="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                                Software Engineer Intern
-                            </h3>
-
-                            {/* Responsibilities */}
-                            <ul className='space-y-3'>
-                                <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
-                                    <svg className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span className='text-sm leading-relaxed'>
-                                        Built RESTful APIs using Node.js and Express.js with MongoDB integration
-                                    </span>
-                                </li>
-                                <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
-                                    <svg className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span className='text-sm leading-relaxed'>
-                                        Designed database schemas and wrote optimized queries for MySQL and MongoDB
-                                    </span>
-                                </li>
-                                <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
-                                    <svg className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span className='text-sm leading-relaxed'>
-                                        Developed unit tests and participated in code reviews to maintain code quality
-                                    </span>
-                                </li>
-                                <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
-                                    <svg className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span className='text-sm leading-relaxed'>
-                                        Collaborated with cross-functional teams using Agile methodologies
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Second Position */}
-                    <div className="relative md:pl-12 pb-8 group/position">
-                        {/* Second timeline dot - hidden on mobile */}
-                        <div className="hidden md:flex absolute top-6 left-0 w-6 h-6 items-center justify-center">
-                            <div className="absolute w-6 h-6 bg-amber-500 rounded-full animate-ping opacity-20"></div>
-                            <div className="relative w-4 h-4 bg-amber-500 rounded-full border-2 border-[#0a0c10] shadow-lg shadow-amber-500/50"></div>
-                        </div>
 
                         <div className="bg-[#1a1d23] border border-[#2a2d35] hover:border-amber-500/30 rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/10 relative">
                             {/* Gradient overlay */}
@@ -137,7 +70,7 @@ const Experience = () => {
                                 </div>
                             </div>
 
-                            {/* Position title */}
+                            {/* First Position title */}
                             <h3 className='text-xl font-bold text-[#dde1e7] mb-4 flex items-center gap-2'>
                                 <svg className="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -185,6 +118,73 @@ const Experience = () => {
                                     </svg>
                                     <span className='text-sm leading-relaxed'>
                                         Built React.js components and integrated Redux for state management in web applications
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Second Position */}
+                    <div className="relative md:pl-12 pb-8 group/position">
+                        {/* Second timeline dot - hidden on mobile */}
+                        <div className="hidden md:flex absolute top-6 left-0 w-6 h-6 items-center justify-center">
+                            <div className="absolute w-6 h-6 bg-amber-500 rounded-full animate-ping opacity-20"></div>
+                            <div className="relative w-4 h-4 bg-amber-500 rounded-full border-2 border-[#0a0c10] shadow-lg shadow-amber-500/50"></div>
+                        </div>
+                        <div className="bg-[#1a1d23] border border-[#2a2d35] hover:border-amber-500/30 rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/10 relative">
+                            {/* Gradient overlay */}
+                            <div className="absolute inset-0 bg-linear-to-br from-amber-500/5 to-transparent opacity-0 group-hover/position:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
+
+                            {/* Date badge */}
+                            <div className="flex items-center gap-2 mb-3">
+                                <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg px-3 py-1.5 inline-flex items-center gap-2">
+                                    <svg className="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span className='text-sm font-semibold text-amber-400'>Sept. 2022 - Mar. 2023</span>
+                                </div>
+                            </div>
+
+                            {/* Second Position title */}
+                            <h3 className='text-xl font-bold text-[#dde1e7] mb-4 flex items-center gap-2'>
+                                <svg className="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                Software Engineer Intern
+                            </h3>
+
+                            {/* Responsibilities */}
+                            <ul className='space-y-3'>
+                                <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
+                                    <svg className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span className='text-sm leading-relaxed'>
+                                        Built RESTful APIs using Node.js and Express.js with MongoDB integration
+                                    </span>
+                                </li>
+                                <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
+                                    <svg className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span className='text-sm leading-relaxed'>
+                                        Designed database schemas and wrote optimized queries for MySQL and MongoDB
+                                    </span>
+                                </li>
+                                <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
+                                    <svg className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span className='text-sm leading-relaxed'>
+                                        Developed unit tests and participated in code reviews to maintain code quality
+                                    </span>
+                                </li>
+                                <li className='flex items-start gap-3 text-[#9ca3af] hover:text-[#dde1e7] transition-colors duration-200'>
+                                    <svg className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span className='text-sm leading-relaxed'>
+                                        Collaborated with cross-functional teams using Agile methodologies
                                     </span>
                                 </li>
                             </ul>

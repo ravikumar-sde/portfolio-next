@@ -28,7 +28,7 @@ const SkillCard = ({ skill }: SkillCardProps) => {
     };
 
     return (
-        <div className='group/card w-full min-h-[340px] text-amber-50 flex flex-col gap-4 py-4 px-4 rounded-xl relative overflow-hidden shadow-lg hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300'>
+        <div className='group/card w-full h-[360px] text-amber-50 flex flex-col gap-4 py-4 px-4 rounded-xl relative overflow-hidden shadow-lg hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300'>
             <div
                 className='absolute inset-0 opacity-20 group-hover/card:opacity-25 transition-opacity duration-300'
                 style={{ backgroundColor: skill.colour }}
@@ -48,11 +48,11 @@ const SkillCard = ({ skill }: SkillCardProps) => {
             </div>
 
             {/* Content Section */}
-            <div className='relative z-10 flex-1 flex flex-col gap-4'>
+            <div className='relative z-10 flex-1 flex flex-col gap-4 overflow-hidden'>
                 {/* Proficiency Section */}
                 {proficiencyValue > 0 && (
                     <div
-                        className="relative group/proficiency"
+                        className="relative group/proficiency shrink-0"
                         onMouseEnter={() => setShowLevel(true)}
                         onMouseLeave={() => setShowLevel(false)}
                     >
@@ -84,14 +84,14 @@ const SkillCard = ({ skill }: SkillCardProps) => {
 
                 {/* Experience Section */}
                 {skill.experience && (
-                    <div className='flex-1'>
+                    <div className='shrink-0'>
                         <h3 className='text-sm font-semibold text-amber-400 mb-2 flex items-center gap-2'>
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             Experience
                         </h3>
-                        <p className='text-xs text-[#dde1e7]/80 leading-relaxed'>
+                        <p className='text-xs text-[#dde1e7]/80 leading-relaxed line-clamp-3'>
                             {skill.experience}
                         </p>
                     </div>
@@ -99,35 +99,37 @@ const SkillCard = ({ skill }: SkillCardProps) => {
 
                 {/* Certifications Section */}
                 {skill.cerfications && skill.cerfications.length > 0 && (
-                    <div className='mt-auto'>
-                        <h3 className='text-sm font-semibold text-amber-400 mb-2 flex items-center gap-2'>
+                    <div className='flex-1 flex flex-col min-h-0'>
+                        <h3 className='text-sm font-semibold text-amber-400 mb-2 flex items-center gap-2 shrink-0'>
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                             </svg>
                             Certifications
                         </h3>
-                        <div className='flex flex-col gap-2'>
-                            {skill.cerfications.map(cerfication => (
-                                <a
-                                    href={cerfication.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    key={cerfication.name}
-                                    className='group/cert relative flex items-start gap-2 p-2 rounded-md bg-black/30 border border-white/10 hover:border-amber-500/50 hover:bg-black/40 transition-all duration-300'
-                                >
-                                    <svg className="w-4 h-4 mt-0.5 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
-                                    <div className='flex-1 min-w-0'>
-                                        <p className='text-xs text-[#dde1e7] leading-relaxed group-hover/cert:text-amber-100 transition-colors'>
-                                            {cerfication.name}
-                                        </p>
-                                    </div>
-                                    <svg className="w-3 h-3 text-amber-400/50 group-hover/cert:text-amber-400 group-hover/cert:translate-x-0.5 transition-all shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </a>
-                            ))}
+                        <div className='flex-1 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-amber-500/30 scrollbar-track-transparent hover:scrollbar-thumb-amber-500/50'>
+                            <div className='flex flex-col gap-2'>
+                                {skill.cerfications.map(cerfication => (
+                                    <a
+                                        href={cerfication.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        key={cerfication.name}
+                                        className='group/cert relative flex items-start gap-2 p-2 rounded-md bg-black/30 border border-white/10 hover:border-amber-500/50 hover:bg-black/40 transition-all duration-300'
+                                    >
+                                        <svg className="w-4 h-4 mt-0.5 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                        <div className='flex-1 min-w-0'>
+                                            <p className='text-xs text-[#dde1e7] leading-relaxed group-hover/cert:text-amber-100 transition-colors'>
+                                                {cerfication.name}
+                                            </p>
+                                        </div>
+                                        <svg className="w-3 h-3 text-amber-400/50 group-hover/cert:text-amber-400 group-hover/cert:translate-x-0.5 transition-all shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 )}
