@@ -44,7 +44,7 @@ const skills = [
         name: "JavaScript",
         icon: "devicon-javascript-plain",
         colour: "#F5AD18",
-        proficiency: "4",
+        proficiency: "5",
         category: "Frontend",
         experience: "Strong expertise in ES6+ JavaScript, asynchronous programming, DOM manipulation, and modern JavaScript frameworks.",
         cerfications: [
@@ -66,7 +66,7 @@ const skills = [
         name: "React.js",
         icon: "devicon-react-original",
         colour: "#8CE4FF",
-        proficiency: "4",
+        proficiency: "5",
         category: "Frontend",
         experience: "Extensive experience building scalable React applications with hooks, context API, state management, and Next.js ecosystem.",
         cerfications: [
@@ -84,7 +84,7 @@ const skills = [
         name: "Node.js",
         icon: "devicon-nodejs-plain",
         colour: "#3CB371",
-        proficiency: "4",
+        proficiency: "5",
         category: "Backend",
         experience: "Skilled in building high-performance server-side applications, RESTful APIs, and real-time systems with Node.js.",
         cerfications: [
@@ -112,7 +112,7 @@ const skills = [
         name: "MySQL",
         icon: "devicon-mysql-plain",
         colour: "teal",
-        proficiency: "4",
+        proficiency: "5",
         category: "Databases",
         experience: "Strong experience in database design, complex queries, optimization, and managing relational databases with MySQL.",
         cerfications: []
@@ -135,7 +135,7 @@ const skills = [
         name: "Docker",
         icon: "devicon-docker-plain",
         colour: "#67B2D8",
-        proficiency: "4",
+        proficiency: "5",
         category: "Tools",
         experience: "Proficient in containerization, creating Docker images, multi-stage builds, and orchestrating containers for deployment.",
         cerfications: [

@@ -13,17 +13,17 @@ export default function Header() {
     };
 
     return (
-        <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0a0c10] via-[#0f1115] to-[#0a0c10]">
+        <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-[#0a0c10] via-[#0f1115] to-[#0a0c10]">
             {/* Animated grid background */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(245,158,11,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(245,158,11,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(245,158,11,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(245,158,11,0.03)_1px,transparent_1px)] bg-size-[50px_50px] mask-[radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]"></div>
 
             {/* Floating orbs */}
             <div className="absolute top-20 left-10 w-72 h-72 bg-amber-500/10 rounded-full blur-[100px] animate-pulse"></div>
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1.5s' }}></div>
 
             {/* Animated lines */}
-            <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-amber-500/20 to-transparent"></div>
-            <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-amber-500/20 to-transparent"></div>
+            <div className="absolute top-0 left-1/4 w-px h-full bg-linear-to-b from-transparent via-amber-500/20 to-transparent"></div>
+            <div className="absolute top-0 right-1/4 w-px h-full bg-linear-to-b from-transparent via-amber-500/20 to-transparent"></div>
 
             <div className="container mx-auto px-4 md:px-8 lg:px-16 z-10">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -40,13 +40,13 @@ export default function Header() {
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                                 <span className="text-[#dde1e7]">Hi, I&apos;m</span>
                                 <br />
-                                <span className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
+                                <span className="bg-linear-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
                                     Ravi Kumar
                                 </span>
                             </h1>
 
                             {/* Typing animation */}
-                            <div className="relative min-h-[80px] flex items-center">
+                            <div className="relative min-h-20 flex items-center">
                                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#9ca3af]">
                                     {startTyping && (
                                         <TypingAnimation
@@ -73,7 +73,7 @@ export default function Header() {
                                 onClick={() => scrollToSection('projects')}
                                 className="group relative px-8 py-4 bg-amber-500 hover:bg-amber-600 text-[#0a0c10] font-bold rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/50 hover:scale-105 overflow-hidden"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="absolute inset-0 bg-linear-to-r from-amber-400 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <span className="relative flex items-center gap-2">
                                     View Projects
                                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
