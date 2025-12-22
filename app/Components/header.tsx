@@ -30,7 +30,7 @@ export default function Header() {
                     {/* Left side - Content */}
                     <div className="space-y-8 animate-in fade-in slide-in-from-left-8 duration-1000">
                         {/* Badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full backdrop-blur-sm">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 mt-8 bg-amber-500/10 border border-amber-500/30 rounded-full backdrop-blur-sm">
                             <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
                             <span className="text-amber-400 text-sm font-medium">Available for opportunities</span>
                         </div>
